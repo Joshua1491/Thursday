@@ -68,10 +68,7 @@ export function InvoiceAssistant() {
     enabled: false, // Only fetch when explicitly requested
   });
 
-  // @ts-ignore – FIXME migrate to React-Query v5 and usePending
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const { mutate: generateInvoice, data: invoiceData, isLoading: isGeneratingInvoice } = useMutation({
+  const { mutate: generateInvoice, data: invoiceData, isPending: isGeneratingInvoice } = useMutation({
     mutationFn: generateInvoiceDraft,
   });
 
