@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {
   useFabrics,
   useDeleteFabric
@@ -14,12 +15,12 @@ export default function FabricListPage() {
     <div className="p-6">
       <div className="flex justify-between mb-4">
         <h1 className="text-2xl font-semibold">Fabric Inventory</h1>
-        <a
+        <Link
           href="/fabrics/create"
           className="bg-blue-600 text-white rounded px-3 py-1"
         >
           + Add
-        </a>
+        </Link>
       </div>
 
       <table className="min-w-full border">
