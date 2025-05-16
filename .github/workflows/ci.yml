@@ -37,5 +37,5 @@ jobs:
       - name: Build Context Manager
         working-directory: ./context-manager
         run: |
-          npm install   # still using install until we add a lockfile
+          npm ci
           npm run build 
