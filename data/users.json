@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "username": "Joshua",
+    "password": "Joshua",
+    "roles": [
+      "IT Team Admin",
+      "System Admin"
+    ]
+  },
+  {
+    "id": "2",
+    "username": "Alice",
+    "password": "Alice123",
+    "roles": [
+      "Warehouse Manager"
+    ]
+  },
+  {
+    "id": "3",
+    "username": "Bob",
+    "password": "Bob123",
+    "roles": [
+      "Inventory Clerk"
+    ]
+  },
+  {
+    "id": "4",
+    "username": "David",
+    "password": "David14",
+    "roles": [
+      "Managing Director"
+    ]
+  }
+]

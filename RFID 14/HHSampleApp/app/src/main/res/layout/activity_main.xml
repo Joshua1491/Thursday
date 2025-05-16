@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SDKSample"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#512DA8"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/statusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RFID Status:"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/textViewStatusrfid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#666"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/epcTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last EPC Read: None"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:id="@+id/textShortCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ref Code:"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="#333"
+            android:paddingBottom="12dp" />
+
+        <!-- Fabric data fields -->
+        <EditText
+            android:id="@+id/etFabricName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fabric Name" />
+
+        <EditText
+            android:id="@+id/etColour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Colour" />
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Weight" />
+
+        <EditText
+            android:id="@+id/etGsm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="GSM" />
+
+        <EditText
+            android:id="@+id/etDiameter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Diameter" />
+
+        <EditText
+            android:id="@+id/etSku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SKU" />
+
+        <EditText
+            android:id="@+id/etBatchNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Batch Number" />
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location" />
+
+        <EditText
+            android:id="@+id/etIssuedAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Issued At"
+            android:focusable="false" />
+
+        <Button
+            android:id="@+id/btnWriteFabricData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Write Fabric Data"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:backgroundTint="#512DA8"
+            android:textColor="#FFF"
+            android:layout_marginBottom="8dp"
+            android:onClick="writeFabricData" />
+
+        <Button
+            android:id="@+id/btnReadFabricData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Read Fabric Data"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:backgroundTint="#388E3C"
+            android:textColor="#FFF"
+            android:layout_marginBottom="16dp"
+            android:onClick="readFabricData" />
+
+        <!-- Actions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actions"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#512DA8"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnStartInventory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start Inventory"
+                android:onClick="StartInventory"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnStopInventory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Stop Inventory"
+                android:onClick="StopInventory"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnTestFunction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TestFunction"
+                android:onClick="testFunction" />
+        </LinearLayout>
+
+        <!-- Scan Result Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan Result"
+            android:textStyle="bold"
+            android:textColor="#512DA8"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/scanResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:background="#EDE7F6"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Tag List Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tag List"
+            android:textStyle="bold"
+            android:textColor="#512DA8"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TAG ID:"
+                android:textStyle="bold"
+                android:textColor="#333" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RSSI:"
+                android:textStyle="bold"
+                android:textColor="#333" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/edittextrfid"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#F3F3F3"
+            android:textColor="#444"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:textSize="14sp"
+            android:gravity="top|start"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
