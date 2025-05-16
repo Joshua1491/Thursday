@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --config .eslintrc.json --max-warnings=0",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.3",
