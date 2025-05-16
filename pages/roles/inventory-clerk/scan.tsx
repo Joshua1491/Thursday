@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import { RoleGuard } from '../../../components/RoleGuard';
 import { RfidConnectionManager } from '../../../components/RfidConnectionManager';
